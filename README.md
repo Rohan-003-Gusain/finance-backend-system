@@ -2,7 +2,14 @@
 ### Spring Boot REST API with role-based access control, transaction management, and dashboard analytics
 ---
 
-## Objective
+## 🌍 Live Application
+
+Swagger UI:
+[Open Swagger UI](https://finance-backend-system-1lzf.onrender.com)
+
+---
+
+## 🎯 Objective
 
 The **Finance Backend System** is a RESTful backend application built using **Spring Boot**.
 
@@ -31,7 +38,7 @@ This project fulfills all core requirements of the assignment:
  
 ---
 
-## Technologies Used
+## 🛠 Technologies Used
 
 - **Language:** Java
 - **Framework:** Spring Boot
@@ -45,7 +52,7 @@ This project fulfills all core requirements of the assignment:
 
 ---
 
-## Features
+## ✨ Features
 
 ### Authentication & Authorization
 - Login using email & password
@@ -81,7 +88,7 @@ This project fulfills all core requirements of the assignment:
 
 ---
 
-## API Endpoints
+## 📡 Backend API Endpoints
 
 ### Authentication
 | Method | Endpoint | Access | Description |
@@ -288,15 +295,17 @@ com.finance
 
 ---
 
-## How to Run
+## 🚀 How to Run
 
-1. Clone the repository
+### 📥 Step 1: Clone the repository
 ```bash
    git clone <your-repo-url>
 ```
 
-2. Configure `src/main/resources/application.properties`:
-```properties
+### ⚙ Step 2: Configure:
+
+``` src/main/resources/application.properties
+   properties
    spring.datasource.url=jdbc:postgresql://localhost:5432/finance_db
    spring.datasource.username=your_username
    spring.datasource.password=your_password
@@ -304,14 +313,14 @@ com.finance
    jwt.expiration=86400000
 ```
 
-3. Run the application:
+### ▶ Step 3: Run the application:
 ```bash
    mvn spring-boot:run
 ```
 
-4. Access Swagger UI at:
+### Step 4: Access Swagger UI at:
 ```
    http://localhost:8080/swagger-ui.html
 ```
 
-5. Login via `/login` to get JWT token, then use **Authorize** button in Swagger to set Bearer token
+---
