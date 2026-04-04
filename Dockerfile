@@ -1,14 +1,16 @@
-# Use Java 21 runtime
-FROM eclipse-temurin:21-jdk-jammy
+# Stage 1: Build (Maven)
+FROM maven:3.9.9-eclipse-temurin-17 AS build
 
-# Set working directory
 WORKDIR /app
+COPY . .
+RUN mvn clean package -DskipTests
 
-# Copy jar file
-COPY target/finance-backend-system-0.0.1-SNAPSHOT.jar app.jar
+# Stage 2: Run (Lightweight)
+FROM eclipse-temurin:17-jdk-jammy
 
-# Expose port
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+
 EXPOSE 8080
 
-# Run application
 ENTRYPOINT ["java", "-jar", "app.jar"]
