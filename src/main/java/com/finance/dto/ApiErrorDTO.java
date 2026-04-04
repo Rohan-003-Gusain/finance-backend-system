@@ -1,0 +1,14 @@
+package com.finance.dto;
+
+import lombok.Builder;
+import lombok.Getter;
+
+@Getter
+@Builder
+public class ApiErrorDTO {
+
+    private int status;
+    private String error;
+    private String message;
+    private String path;
+}
