@@ -10,10 +10,10 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.finance</groupId>
-	<artifactId>finanace-backend-system</artifactId>
+	<artifactId>finance-backend-system</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>finanace-backend-system</name>
-	<description>Finanace Backend System</description>
+	<name>finance-backend-system</name>
+	<description>Finance Backend System</description>
 	<url />
 	<licenses>
 		<license />
